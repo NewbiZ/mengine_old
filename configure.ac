@@ -19,7 +19,7 @@ AC_PROG_LIBTOOL
 AM_PROG_CC_C_O
 
 AC_CONFIG_FILES(Makefile \
-                src/Makefile \
-                src/libmengine.pc)
+                libmengine/Makefile \
+                libmengine/libmengine.pc)
 
 AC_OUTPUT
