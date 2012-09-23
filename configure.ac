@@ -21,6 +21,7 @@ AM_PROG_CC_C_O
 AC_CONFIG_FILES(Makefile \
                 libmengine/Makefile \
                 libmengine/libmengine.pc \
+                tests/Makefile \
                 examples/Makefile \
                 examples/hello_world/Makefile)
 
