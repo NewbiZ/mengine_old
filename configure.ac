@@ -4,7 +4,7 @@ AC_INIT([mengine], [m4_esyscmd([./version.sh])], [vallee.aurelien@gmail.com])
 
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_MACRO_DIR([m4])
-AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([libmengine/config.h])
 
 AC_CANONICAL_SYSTEM
 
@@ -20,6 +20,8 @@ AM_PROG_CC_C_O
 
 AC_CONFIG_FILES(Makefile \
                 libmengine/Makefile \
-                libmengine/libmengine.pc)
+                libmengine/libmengine.pc \
+                examples/Makefile \
+                examples/hello_world/Makefile)
 
 AC_OUTPUT

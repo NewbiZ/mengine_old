@@ -1,1 +1,2 @@
-SUBDIRS = libmengine
+SUBDIRS = libmengine \
+		  examples

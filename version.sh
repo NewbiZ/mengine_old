@@ -1,16 +1,16 @@
 #!/bin/sh
 
-if [ ! -f inc/mengine/mengine.h ]; then
-    echo "version.sh: error: inc/mengine/mengine.h does not exist" 1>&2
+if [ ! -f include/mengine/mengine.h ]; then
+    echo "version.sh: error: include/mengine/mengine.h does not exist" 1>&2
     exit 1
 fi
 
-MAJOR=`egrep '^#define +MENGINE_VERSION_MAJOR +[0-9]+$' inc/mengine/mengine.h`
-MINOR=`egrep '^#define +MENGINE_VERSION_MINOR +[0-9]+$' inc/mengine/mengine.h`
-PATCH=`egrep '^#define +MENGINE_VERSION_PATCH +[0-9]+$' inc/mengine/mengine.h`
+MAJOR=`egrep '^#define +MENGINE_VERSION_MAJOR +[0-9]+$' include/mengine/mengine.h`
+MINOR=`egrep '^#define +MENGINE_VERSION_MINOR +[0-9]+$' include/mengine/mengine.h`
+PATCH=`egrep '^#define +MENGINE_VERSION_PATCH +[0-9]+$' include/mengine/mengine.h`
 
 if [ -z "$MAJOR" -o -z "$MINOR" -o -z "$PATCH" ]; then
-    echo "version.sh: error: could not extract version from inc/mengine/mengine.h" 1>&2
+    echo "version.sh: error: could not extract version from include/mengine/mengine.h" 1>&2
     exit 1
 fi
 

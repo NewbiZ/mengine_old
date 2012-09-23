@@ -3,11 +3,11 @@ lib_LTLIBRARIES = libmengine.la
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libmengine.pc
 
-pkginclude_HEADERS = ../inc/mengine/mengine.h
+pkginclude_HEADERS = $(top_srcdir)/include/mengine/mengine.h
 
 libmengine_la_SOURCES = \
 	mengine.cpp
 
 libmengine_la_LDFLAGS = -no-undefined -version-info @LTVER@
 
-libmengine_la_CPPFLAGS = -I$(top_srcdir)/inc/
+libmengine_la_CPPFLAGS = -I$(top_srcdir)/include/
