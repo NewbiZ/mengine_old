@@ -10,4 +10,6 @@ libmengine_la_SOURCES = \
 
 libmengine_la_LDFLAGS = -no-undefined -version-info @LTVER@
 
-libmengine_la_CPPFLAGS = -I$(top_srcdir)/include/
+libmengine_la_CPPFLAGS = -I$(top_srcdir)/include/ \
+						 -Wall \
+						 -pedantic

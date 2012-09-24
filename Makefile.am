@@ -1,6 +1,10 @@
 SUBDIRS = libmengine \
-		  tests \
-		  examples
+		  $(TESTS_DIR) \
+		  $(EXAMPLES_DIR)
+
+EXTRA_DIST = \
+	autogen.sh \
+	version.sh
 
 MAINTAINERCLEANFILES = \
 	Makefile.in \
