@@ -8,8 +8,9 @@ pkginclude_HEADERS = $(top_srcdir)/include/mengine/mengine.h
 libmengine_la_SOURCES = \
 	mengine.cpp
 
-libmengine_la_LDFLAGS = -no-undefined -version-info @LTVER@
+libmengine_la_LDFLAGS = -no-undefined -version-info @LTVER@ @libglfw_LIBS@
 
 libmengine_la_CPPFLAGS = -I$(top_srcdir)/include/ \
 						 -Wall \
-						 -pedantic
+						 -pedantic \
+						 @libglfw_CFLAGS@

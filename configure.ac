@@ -55,6 +55,8 @@ else
 fi
 AC_SUBST([TESTS_DIR])
 
+PKG_CHECK_MODULES([libglfw], [libglfw >= 2.7])
+
 AC_CONFIG_FILES(Makefile \
                 libmengine/Makefile \
                 libmengine/libmengine.pc \
