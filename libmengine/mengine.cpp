@@ -9,7 +9,7 @@ namespace mengine
 
 void hello()
 {
-    bool running = false;
+    bool running = true;
 
     if (!glfwInit())
     {
@@ -30,7 +30,7 @@ void hello()
 
         glfwSwapBuffers();
 
-        running = glfwGetKey(GLFW_KEY_ESC) && glfwGetWindowParam(GLFW_OPENED);
+        running = !glfwGetKey(GLFW_KEY_ESC) && glfwGetWindowParam(GLFW_OPENED);
     }
 
     glfwTerminate();

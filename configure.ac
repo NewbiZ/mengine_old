@@ -18,14 +18,19 @@ AC_PROG_CXX
 AC_PROG_LIBTOOL
 AM_PROG_CC_C_O
 
+CXXFLAGS="$CXXFLAGS -W -Wall -Wextra -Werror -Weffc++"
+
 AC_ARG_WITH([debug], [AS_HELP_STRING([--with-debug],
 	[Enable debug [default=no]])], [enable_debug=$withval],
 	[enable_debug=no])
 AM_CONDITIONAL(ENABLE_DEBUG, test "X$enable_debug" = "Xyes")
 if test "X$enable_debug" = "Xyes"
 then
-    CXXFLAGS="$CXXFLAGS -g -O0 -DDEBUG"
+    CXXFLAGS="$CXXFLAGS -ggdb -O0 -DDEBUG"
     AC_MSG_NOTICE([*** INFO: Debug mode is enabled])
+else
+    CXXFLAGS="$CXXFLAGS -O2"
+    AC_MSG_NOTICE([*** INFO: Release mode is enabled])
 fi
 AC_SUBST([EXAMPLES_DIR])
 
